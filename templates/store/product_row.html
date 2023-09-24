@@ -1,0 +1,22 @@
+
+<div class="row">
+    {% for obj in products %}
+    <div class="col-md-4">
+        <figure class="card card-product-grid">
+            <div class="img-wrap"> 
+                <img src="{{obj.images.url}}">
+                
+            </div> <!-- img-wrap.// -->
+            <figcaption class="info-wrap">
+                <div class="fix-height">
+                    <a href="{{obj.get_absolute_url}}" class="title">{{obj.name}}</a>
+                    <div class="price-wrap mt-2">
+                        <span class="price">${{obj.price}}</span>
+                    </div> <!-- price-wrap.// -->
+                </div>
+                <a href="#" class="btn btn-block btn-primary">Add to cart </a>	
+            </figcaption>
+        </figure>
+    </div> <!-- col.// -->
+    {% endfor %}
+</div> <!-- row end.// -->
